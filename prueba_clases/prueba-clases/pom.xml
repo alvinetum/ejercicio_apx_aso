@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>prueba-clases</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <slf4j.version>1.7.36</slf4j.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.3.27</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bbva.jee.arq.spring.core</groupId>
+            <artifactId>arq-spring-restutils</artifactId>
+            <version>5.13.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.bbva.jee.arq.spring.core</groupId>
+            <artifactId>arq-spring-servicing-core</artifactId>
+            <version>5.13.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.bbva.jee.arq.spring.core</groupId>
+            <artifactId>arq-spring-core-api</artifactId>
+            <version>5.13.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.bbva.jee.arq.spring.core</groupId>
+            <artifactId>arq-spring-aspects-generator</artifactId>
+            <version>5.13.4.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>4.5.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.3.27</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.bbva.aso.plugins</groupId>
+                <artifactId>kermit-maven-plugin</artifactId>
+                <version>2.1.0</version>
+                <configuration>
+                    <packageName>org.example.business.v0</packageName>
+                    <transactions>
+                        <transaction>
+                            <copy>transaction/APX/CAAAT001-01-CO.xml</copy>
+                            <protocol>APX</protocol>
+                        </transaction>
+                    </transactions>
+                </configuration>
+            </plugin>
+        </plugins>
+        <finalName>${project.artifactId}</finalName>
+    </build>
+</project>
