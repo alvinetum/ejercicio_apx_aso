@@ -10,7 +10,7 @@
             <parameter order="1" name="nombreTitular" mandatory="0" type="String" size="30"/>
             <parameter order="2" name="saldo" mandatory="0" type="String" size="100"/>
             <parameter order="3" name="numeroCuenta" mandatory="0" type="String" size="100"/>
-            <parameter order="4" name="httpCode" mandatory="0" type="Integer" size="10"/>
+            <parameter order="4" name="httpCode" mandatory="0" type="String" size="10"/>
             <dto order="5" name="error" mandatory="0" package="com.bbva.caaa.dto.ErrorDTO" artifactId="CAAAC001">
                 <parameter order="1" name="description" mandatory="0" type="String" size="200"/>
             </dto>
