@@ -41,7 +41,7 @@ public class CAAAR001Impl extends CAAAR001Abstract {
         ResponseDTO errorResponse = new ResponseDTO();
         errorResponse.setHttpCode(code);
         errorResponse.setNombreTitular(message);
-        errorResponse.setSaldo(0.0);
+        //errorResponse.setSaldo(0.0);
         return errorResponse;
     }
 

@@ -117,7 +117,7 @@ public class CAAAT00101COTransactionTest {
 
 		ResponseDTO mockResponse = new ResponseDTO();
 		mockResponse.setNombreTitular("Juan Perez");
-		mockResponse.setSaldo(1500000.0);
+		//mockResponse.setSaldo(1500000.0);
 
 		// 2. Comportamiento esperado de los métodos de infraestructura APX
 		//Mockito.doReturn(mockRequest).when(transaction).getRequest();
